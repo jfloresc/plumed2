@@ -132,3 +132,33 @@ If you compiled your own documentation, paths to the installed documentation can
 A sample modulefile with environment variable will be placed in
 `$HOME/opt/lib/plumed/src/lib/modulefile`. This can be useful if you want to
 install multiple PLUMED versions side by side and select them with env modules.
+
+Added modifications from ELF (Chen et al, JCIM 2018, March 7th, 2019, DOI: 10.1021/acs.jcim.8b00115)
+
+Installation notes from Chen et al. 2019:
+
+Installation
+1. Clone the modified PLUMED code from github by running:
+
+git clone https://github.com/HanatoK/plumed2.git
+
+2. Change the working directory to PLUMED:
+
+cd ./plumed2
+
+3. Make sure the boost serialization library is installed in your system.
+
+4. Configure PLUMED using:
+
+./configure --enable-boost_serialization --enable-modules=drr 
+
+5. Compile PLUMED by typing:  make
+
+6. Install PLUMED:  sudo make install
+
+7. (Optional) Install PLUMED patched GROMACS:
+
+	a. Change the working directory to the GROMACS source code and run:
+	    plumed patch –p, and then select corresponding GROMACS version.
+
+	b. Compile GROMACS source code and install.
