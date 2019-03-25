@@ -140,7 +140,7 @@ Installation notes from Chen et al. 2019:
 Installation
 1. Clone the modified PLUMED code from github by running:
 
-git clone https://github.com/HanatoK/plumed2.git
+git clone this repository
 
 2. Change the working directory to PLUMED:
 
